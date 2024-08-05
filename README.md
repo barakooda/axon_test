@@ -4,7 +4,5 @@ This project demonstrates a video processing pipeline using OpenCV and multiproc
 
 ## Example Output
 
-Below is an example of the output showing the blurred result:
-
 ![Blurred Frame](docs/images/result.jpg)
 
