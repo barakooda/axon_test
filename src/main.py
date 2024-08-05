@@ -6,7 +6,7 @@ from viewer import viewer
 import cv2
 
 if __name__ == "__main__":
-    # Construct the relative path to the video file
+    
     video_path = os.path.join(os.path.dirname(__file__), '../data/People6387.mp4')
 
     cap = cv2.VideoCapture(video_path)

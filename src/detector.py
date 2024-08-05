@@ -9,7 +9,7 @@ def detector(frame_queue, result_queue):
         if frame is None:
             break
 
-        gray_frame = frame  # Frame is already in grayscale
+        gray_frame = frame
         gray_frame = cv2.GaussianBlur(gray_frame, (21, 21), 0)
 
         if prev_frame is None:
