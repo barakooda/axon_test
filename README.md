@@ -8,5 +8,3 @@ Below is an example of the output showing the blurred result:
 
 ![Blurred Frame](docs/images/result.jpg)
 
-## Project Structure
-
