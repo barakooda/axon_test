@@ -1,18 +1,22 @@
 import multiprocessing
+import os
 from streamer import streamer
 from detector import detector
 from viewer import viewer
 import cv2
 
 if __name__ == "__main__":
-    video_path = "C:/temp/axon_test/data/People6387.mp4"
+    # Construct the relative path to the video file
+    video_path = os.path.join(os.path.dirname(__file__), '../data/People6387.mp4')
 
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
+        print(f"Error: Unable to open video file {video_path}")
         exit(1)
 
     fps = cap.get(cv2.CAP_PROP_FPS)
     if fps == 0:
+        print("Error: FPS is zero, invalid video file")
         exit(1)
     cap.release()
 
