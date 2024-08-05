@@ -31,6 +31,7 @@ def viewer(result_queue, fps):
         # Display frame using OpenCV
         cv2.imshow("Frame", frame)
 
+        # Calculate elapsed time and sleep to maintain frame rate
         elapsed_time = time.time() - start_time
         sleep_time = max(0, frame_time - elapsed_time)
         time.sleep(sleep_time)
