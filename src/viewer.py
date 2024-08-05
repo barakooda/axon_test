@@ -26,7 +26,7 @@ def viewer(result_queue, fps):
 
         # Add time overlay
         current_time = time.strftime("%Y-%m-%d %H:%M:%S")
-        cv2.putText(frame, current_time, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(frame, current_time, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255), 2, cv2.LINE_AA)
 
         # Display frame using OpenCV
         cv2.imshow("Frame", frame)

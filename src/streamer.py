@@ -15,7 +15,8 @@ def streamer(video_path, frame_queue):
         ret, frame = cap.read()
         if not ret:
             break
-        frame_queue.put(frame)
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        frame_queue.put(gray_frame)
 
         # Sleep to maintain the frame rate
         elapsed_time = time.time() - start_time
