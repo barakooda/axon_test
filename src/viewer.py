@@ -2,9 +2,7 @@ import cv2
 import time
 
 def blur_region(frame, x, y, w, h):
-    roi = frame[y:y+h, x:x+w]
-    blurred_roi = cv2.GaussianBlur(roi, (51, 51), 0)
-    frame[y:y+h, x:x+w] = blurred_roi
+    frame[y:y+h, x:x+w] = cv2.GaussianBlur(frame[y:y+h, x:x+w], (51, 51), 0)
     return frame
 
 def viewer(result_queue, fps):
